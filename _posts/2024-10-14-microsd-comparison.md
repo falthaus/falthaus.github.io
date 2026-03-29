@@ -14,9 +14,9 @@ Considering the SD card was quite old, I decided to buy more modern examples and
 
 |Card|Manufacturer|Capacity|Filesystem|Speed Ratings|Application Performance Class|Bitrate (claimed)|
 |:--:|:---|:---|:---|:---|:---|:---|
-|<small>#1</small>|<small>Kingston</small>|<small>16 GB (SDHC)</small>|<small>FAT32</small>|<small>Speed Class 10,</br>UHS-I,</br>UHS Speed Class 1</small>|<small>n/a</small>|<small>up to 45 MB/s (read)</small>|
-|<small>#2</small>|<small>Kingston</small>|<small>16 GB (SDHC)</small>|<small>FAT32</small>|<small>Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30</small>|<small>A1</small>|<small>up to 100 MB/s (read)</small>|
-|<small>#3</small>|<small>SanDisk</small>|<small>32 GB (SDHC)</small>|<small>FAT32</small>|<small>Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30</small>|<small>A1</small>|<small>up to 100 MB/s (read),</br>up to 90 MB/s (write)</small>|
+|#1|Kingston|16 GB (SDHC)|FAT32|Speed Class 10,</br>UHS-I,</br>UHS Speed Class 1|n/a|up to 45 MB/s (read)|
+|#2|Kingston|16 GB (SDHC)|FAT32|Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30|A1|up to 100 MB/s (read)|
+|#3|SanDisk|32 GB (SDHC)|FAT32|Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30|A1|up to 100 MB/s (read),</br>up to 90 MB/s (write)|
 
 
 Wikipedia has a good [article about SD cards](https://en.wikipedia.org/wiki/SD_card), explaining the different standards.
