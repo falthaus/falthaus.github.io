@@ -11,11 +11,13 @@ When recording (i.e. writing to the SD card) the script had frequent drops in FP
 
 Considering the SD card was quite old, I decided to buy more modern examples and test them. The table below summarizes the samples and their specs (Card #1 is the original card).
 
+
 |Card|Manufacturer|Capacity|Filesystem|Speed Ratings|Application Performance Class|Bitrate (claimed)|
 |:--:|:---|:---|:---|:---|:---|:---|
-|#1|Kingston|16 GB (SDHC)|FAT32|Speed Class 10,</br>UHS-I,</br>UHS Speed Class 1|n/a|up to 45 MB/s (read)|
-|#2|Kingston|16 GB (SDHC)|FAT32|Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30|A1|up to 100 MB/s (read)|
-|#3|SanDisk|32 GB (SDHC)|FAT32|Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30|A1|up to 100 MB/s (read),</br>up to 90 MB/s (write)|
+|<small>#1</small>|<small>Kingston</small>|<small>16 GB (SDHC)</small>|<small>FAT32</small>|<small>Speed Class 10,</br>UHS-I,</br>UHS Speed Class 1</small>|<small>n/a</small>|<small>up to 45 MB/s (read)</small>|
+|<small>#2</small>|<small>Kingston</small>|<small>16 GB (SDHC)</small>|<small>FAT32</small>|<small>Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30</small>|<small>A1</small>|<small>up to 100 MB/s (read)</small>|
+|<small>#3</small>|<small>SanDisk</small>|<small>32 GB (SDHC)</small>|<small>FAT32</small>|<small>Speed Class 10,</br>UHS-I,</br>UHS Speed Class 3,</br>Video Speed Class 30</small>|<small>A1</small>|<small>up to 100 MB/s (read),</br>up to 90 MB/s (write)</small>|
+
 
 Wikipedia has a good [article about SD cards](https://en.wikipedia.org/wiki/SD_card), explaining the different standards.
 
@@ -37,4 +39,4 @@ Example of FPS performance with card #2 (worst case):
 Example of FPS performance with card #3 (worst case). No drops in frame rate have been noticed.
 ![Card #3 Performance](/assets/SanDisk_32GB_100MBps_1.png)
 
-*(*) Edit: I figured out why there is no difference between using the recorder in `mjpeg` or `ImageIO` mode. When storing a frame using `ImageIO`, `compress()` is called, converting the frame to a JPG still. As the file overhead for an AVI RIFF (mjpeg) and `ImageIO` is marginal, the resulting file size is roughly equivalent.*
+*(\*) Edit: I figured out why there is no difference between using the recorder in `mjpeg` or `ImageIO` mode. When storing a frame using `ImageIO`, `compress()` is called, converting the frame to a JPG still. As the file overhead for an AVI RIFF (mjpeg) and `ImageIO` is marginal, the resulting file size is roughly equivalent.*
