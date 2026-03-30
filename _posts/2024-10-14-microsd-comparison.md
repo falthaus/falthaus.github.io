@@ -23,10 +23,10 @@ Wikipedia has a good [article about SD cards](https://en.wikipedia.org/wiki/SD_c
 
 |Card #1|Card #2|Card #3|
 |:---:|:---:|:---:|
-|![Card #1](/assets/sdcard1_small.jpg)|![Card #2](/assets/sdcard2_small.jpg)|![Card #3](/assets/sdcard3_small.jpg)|
+|![Card #1](/assets/imgs/sdcard1_small.jpg)|![Card #2](/assets/imgs/sdcard2_small.jpg)|![Card #3](/assets/imgs/sdcard3_small.jpg)|
 
 Example of FPS performance drops with the original card #1 (no `sync()`):
-![Card #1 Performance](/assets/Kingston_16GB_45MBps_2.png)
+![Card #1 Performance](/assets/imgs/Kingston_16GB_45MBps_2.png)
 
 Formatting card #1 with exFAT (apparently this could be better for smaller chunks of data), seemed to help a tiny bit, but not consistently. Performance was very random, but always with these frequent dips to single-digit FPS.
 Using `mjpeg.sync()` on the video file every frame, every other, or every n-th frame (as recommended by the OpenMV micropython documentation) made the drops a bit less frequent, but they were still occurring too often.
@@ -34,9 +34,9 @@ Using `mjpeg.sync()` on the video file every frame, every other, or every n-th f
 Using cards #2 and #3 above completely fixed this issue. Frame rate is now consistently approx. 18..19 FPS (the maximum the H7 camera can do at VGA resolution running this script), only occasionally dropping a few FPS. And while the camera only occasionally hit the peak frame rate with card #1, this is now happening consistently. This applies for both the mjpeg module (i.e compressed) as well as the ImageIO writer where the raw frame buffer is written. The latter is however not fully understood yet as the data to be written is significantly larger, and thus needs further testing (*).
 
 Example of FPS performance with card #2 (worst case):
-![Card #2 Performance](/assets/Kingston_16GB_100MBps_1.png)
+![Card #2 Performance](/assets/imgs/Kingston_16GB_100MBps_1.png)
 
 Example of FPS performance with card #3 (worst case). No drops in frame rate have been noticed.
-![Card #3 Performance](/assets/SanDisk_32GB_100MBps_1.png)
+![Card #3 Performance](/assets/imgs/SanDisk_32GB_100MBps_1.png)
 
 *(\*) Edit: I figured out why there is no difference between using the recorder in `mjpeg` or `ImageIO` mode. When storing a frame using `ImageIO`, `compress()` is called, converting the frame to a JPG still. As the file overhead for an AVI RIFF (mjpeg) and `ImageIO` is marginal, the resulting file size is roughly equivalent.*
